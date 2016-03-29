@@ -1,8 +1,9 @@
 {
 	"_id": "1234",
  	"extension": "101",
-    "type": "user",
-    "title" : "Абонент 1",
+    "type": "peer",
+    "title" : "Телефон 1",
+    "vpbxId": "1",
     "params": {
     	"peername": "qw",
     	"secret": "qw",

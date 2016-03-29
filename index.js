@@ -3,8 +3,9 @@ var Joi = require('joi');
 
 var baseSchema = require('./schemes/baseSchema');
 
-var peerTestObj = require('./objects/peerTest.json');
-var userTestObj = require('./objects/userTest.json');
+var peer1 = require('./objects/valid/peer/peer1.json');
+var user1 = require('./objects/valid/user/user1.json');
+
 
 var validate = function (object, schema) {
     return new Promise(function (resolve, reject) {
@@ -20,8 +21,8 @@ var validate = function (object, schema) {
 
 
 var arr = [
-    validate(peerTestObj, baseSchema),
-    validate(userTestObj, baseSchema),
+    validate(peer1, baseSchema),
+    validate(user1, baseSchema),
 ];
 
 Promise.all(arr)
