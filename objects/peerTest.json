@@ -1,0 +1,17 @@
+{
+	"_id": "1234",
+ 	"extension": "101",
+    "type": "peer",
+    "title" : "Телефон 1",
+    "params": {
+    	"peername": "qw",
+    	"secret": "qw",
+    	"record": "yes"
+    },
+    "routes": {
+    	"default": {
+    		"type" : "peer",
+    		"id" : "1235"
+    	}
+    }
+}
