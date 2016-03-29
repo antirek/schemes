@@ -1,17 +1,8 @@
 var Joi = require('joi');
 
 var peer = require('./peerSchema');
+var user = require('./userSchema');
 
-var user = {
-	params: Joi.object().keys({
-		"peername": Joi.string().required(),
-		"secret": Joi.string().required(),
-		"record": Joi.string().required().valid('yes', 'no')
-	}),
-	routes: Joi.object().keys({
-
-	})
-};
 
 var baseSchema = Joi.object().keys({
     "_id": Joi.string().required(),
