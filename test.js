@@ -5,7 +5,7 @@ var baseSchema = require('./schemes/baseSchema');
 
 var peer1 = require('./objects/valid/peer/peer1.json');
 var user1 = require('./objects/valid/user/user1.json');
-
+var peergroup1 = require('./objects/valid/peergroup/peergroup1.json');
 
 var validate = function (object, schema) {
     return new Promise(function (resolve, reject) {
@@ -22,7 +22,8 @@ var validate = function (object, schema) {
 
 var arr = [
     validate(peer1, baseSchema),
-    validate(user1, baseSchema)
+    validate(user1, baseSchema),
+    validate(peergroup1, baseSchema),
 ];
 
 Promise.all(arr)

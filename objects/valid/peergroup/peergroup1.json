@@ -1,0 +1,22 @@
+{
+    "_id": "1234",
+    "extension": "215",
+    "type": "peergroup",
+    "title": "Группа 1",
+    "vpbxId": "1",
+    "context": "internal",
+    "routes": [
+        {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer",
+            "wait": "0",
+            "duration": "30"
+        },
+        {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer",
+            "wait": "10",
+            "duration": "20"
+        }
+    ]
+}

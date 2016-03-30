@@ -13,7 +13,7 @@ var route = {
 		begin: Joi.string().required(),
 		end: Joi.string().required()
 	}),
-	group: Joi.object().keys({
+	peergroup: Joi.object().keys({
 		type: Joi.string().required().valid(types),
 		id: Joi.string().required(),
 		wait: Joi.string().required(),

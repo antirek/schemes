@@ -2,7 +2,7 @@ var Joi = require('joi');
 
 var peer = require('./peerSchema');
 var user = require('./userSchema');
-var group = require('./groupSchema');
+var peergroup = require('./peergroupSchema');
 var timeday = require('./timedaySchema');
 var timeweek = require('./timeweekSchema');
 var ivr = require('./ivrSchema');
@@ -22,7 +22,7 @@ var baseSchema = Joi.object().keys({
     "params": Joi.any()
         .when('type', {is: 'peer', then: peer.params})
         .when('type', {is: 'user', then: user.params})
-        .when('type', {is: 'group', then: group.params})
+        .when('type', {is: 'peergroup', then: peergroup.params})
         .when('type', {is: 'timeday', then: timeday.params})
         .when('type', {is: 'timeweek', then: timeweek.params})
         .when('type', {is: 'ivr', then: ivr.params})
@@ -32,7 +32,7 @@ var baseSchema = Joi.object().keys({
     "routes": Joi.any()
         .when('type', {is: 'peer', then: peer.routes})
         .when('type', {is: 'user', then: user.routes})
-        .when('type', {is: 'group', then: group.routes})
+        .when('type', {is: 'peergroup', then: peergroup.routes})
         .when('type', {is: 'timeday', then: timeday.routes})
         .when('type', {is: 'timeweek', then: timeweek.routes})
         .when('type', {is: 'ivr', then: ivr.routes})

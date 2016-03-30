@@ -13,6 +13,7 @@
         "qualify": "yes",
         "timeout": "0",
         "outgoingNumber": "83912746606",
+        "disallow": "all",
         "allow": "g729",
         "lines": "1"
     },
