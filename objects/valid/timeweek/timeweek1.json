@@ -1,0 +1,38 @@
+{
+    "_id": "1234",
+    "extension": null,
+    "type": "timeweek",
+    "title": "Рабочая стандартная неделя",
+    "vpbxId": "1",
+    "context": "internal",
+    "routes": {
+        "mon": {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer"
+        },
+        "tue": {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer"
+        },
+        "wed": {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer"
+        },
+        "thu": {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer"
+        },
+        "fri": {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer"
+        },
+        "sat": {
+            "id": "56d55d0626d873847a070482",
+            "type": "timeday"
+        },
+        "sun": {
+            "id": "56d55d0626d873847a070482",
+            "type": "timeday"
+        }
+    }
+}

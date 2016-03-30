@@ -1,0 +1,10 @@
+{
+    "_id": "1234",
+    "extension": "101",
+    "type": "queue",
+    "title" : "Очередь 1",
+    "vpbxId": "1",
+    "params": {
+        "name": "Q1234"
+    }
+}

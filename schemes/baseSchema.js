@@ -13,9 +13,9 @@ var types = require('./types');
 
 var baseSchema = Joi.object().keys({
     "_id": Joi.string().required(),
-    "extension": Joi.string(),
+    "extension": Joi.string().allow(null),
     "type": Joi.string().required().valid(types),
-    "context": Joi.string(),
+    "context": Joi.string().allow(['internal', 'incoming']),
     "title" : Joi.string().required(),
     "vpbxId": Joi.string().required(),
 

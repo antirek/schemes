@@ -1,0 +1,22 @@
+{
+    "_id": "1234",
+    "extension": null,
+    "type": "timeday",
+    "title": "Стандартный день",
+    "vpbxId": "1",
+    "context": "internal",
+    "routes": [
+        {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer",
+            "begin": "00:00",
+            "end": "18:00"
+        },
+        {
+            "id": "56ea4d64aa53b5dcb4c6cb74",
+            "type": "peer",
+            "begin": "00:00",
+            "end": "18:00"
+        }
+    ]
+}
