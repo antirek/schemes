@@ -22,7 +22,7 @@ var validate = function (object, schema) {
 
 var arr = [
     validate(peer1, baseSchema),
-    validate(user1, baseSchema),
+    validate(user1, baseSchema)
 ];
 
 Promise.all(arr)
