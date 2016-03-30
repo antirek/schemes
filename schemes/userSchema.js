@@ -1,15 +1,10 @@
 
 var Joi = require('joi');
+var types = require('./types');
 
 var user = {
-	params: Joi.object().keys({
-		"peername": Joi.string().required(),
-		"secret": Joi.string().required(),
-		"record": Joi.string().required().valid('yes', 'no')
-	}),
-	routes: Joi.object().keys({
-
-	})
+	params: Joi.any(),
+	routes: Joi.any()
 };
 
 

@@ -7,10 +7,17 @@
     "params": {
     	"peername": "qw",
     	"secret": "qw",
-    	"record": "yes"
+    	"record": "yes",
+        "type": "friend",
+        "host": "dynamic",
+        "qualify": "yes",
+        "timeout": "0",
+        "outgoingNumber": "83912746606",
+        "allow": "g729",
+        "lines": "1"
     },
     "routes": {
-    	"default": {
+    	"BUSY": {
     		"type" : "peer",
     		"id" : "1235"
     	}
