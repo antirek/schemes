@@ -2,7 +2,7 @@ var Joi = require('joi');
 var baseSchema = require('./schemes/baseSchema');
 
 
-var validate = function (object, schema, cb) {
+var validate = function (object, cb) {
     if (cb) {
         Joi.validate(object, baseSchema, cb);
     } else {
