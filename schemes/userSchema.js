@@ -1,6 +1,6 @@
 
 var Joi = require('joi');
-var types = require('./types');
+var routes = require('./routes');
 
 var user = {
 	params: Joi.any(),

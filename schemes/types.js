@@ -1,6 +1,6 @@
 
 var baseTypes = ["peer", "ivr", "user", "timeweek", 
                 "timeday", "incoming", "queue", 
-                "group"];
+                "group", "outbound", "sayunixtime"];
 
 module.exports = baseTypes;

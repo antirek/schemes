@@ -23,6 +23,13 @@ var route = {
 		type: Joi.string().required().valid(types),
 		id: Joi.string().required(),
 		key: Joi.string().required()
+	}),
+	free: Joi.object().keys({
+		type: Joi.string().required().valid(types)
+	}),
+	custom: Joi.object().keys({
+		type: Joi.string().required().valid(types),
+		id: Joi.string().required()
 	})
 };
 

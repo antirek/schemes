@@ -1,6 +1,5 @@
 var Joi = require('joi');
 
-var types = require('./types');
 var routes = require('./routes');
 
 var peer = {
@@ -13,8 +12,9 @@ var peer = {
 		"qualify": Joi.string().required(),
 		"timeout": Joi.string().required(),
 		"outgoingNumber": Joi.string().required(),
+		"disallow": Joi.string().required(),
 		"allow": Joi.string().required(),
-		"lines": Joi.string().required(),
+		"lines": Joi.string().required()
 	}),
 	routes: Joi.object().keys({
 		"BUSY": routes.standard,

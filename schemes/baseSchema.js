@@ -30,7 +30,14 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'incoming', then: incoming.params})
     ,
     "routes": Joi.any()
-        .when('type', {is: 'peer', then: peer.routes}),
+        .when('type', {is: 'peer', then: peer.routes})
+        .when('type', {is: 'user', then: user.routes})
+        .when('type', {is: 'group', then: group.routes})
+        .when('type', {is: 'timeday', then: timeday.routes})
+        .when('type', {is: 'timeweek', then: timeweek.routes})
+        .when('type', {is: 'ivr', then: ivr.routes})
+        .when('type', {is: 'queue', then: queue.routes})
+        .when('type', {is: 'incoming', then: incoming.routes})
 });
 
 module.exports = baseSchema;
