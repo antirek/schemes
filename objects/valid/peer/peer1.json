@@ -7,7 +7,7 @@
     "params": {
     	"peername": "qw",
     	"secret": "qw",
-    	"record": "yes",
+    	"record": "true",
         "type": "friend",
         "host": "dynamic",
         "qualify": "yes",
