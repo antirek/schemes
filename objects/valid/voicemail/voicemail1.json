@@ -1,0 +1,12 @@
+{
+    "_id" : "56fcdff71c7df6c2541319cf",
+    "extension" : null,
+    "type" : "voicemail",
+    "title" : "Vasiliy",
+    "vpbxId" : "1",
+    "params" : {
+        "number" : "300",
+        "password" : "1111",
+        "keys": "s"
+    }
+}

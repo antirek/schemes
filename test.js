@@ -7,6 +7,7 @@ var timeweek1 = require('./objects/valid/timeweek/timeweek1.json');
 var incoming1 = require('./objects/valid/incoming/incoming1.json');
 var ivr1 = require('./objects/valid/ivr/ivr1.json');
 var queue1 = require('./objects/valid/queue/queue1.json');
+var voicemail1 = require('./objects/valid/voicemail/voicemail1.json');
 
 var validate = require('./index');
 
@@ -18,7 +19,8 @@ var arr = [
     validate(timeweek1),
     validate(incoming1),
     validate(ivr1),
-    validate(queue1)
+    validate(queue1),
+    validate(voicemail1)
 ];
 
 Promise.all(arr)
