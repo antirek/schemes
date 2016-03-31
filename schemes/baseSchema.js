@@ -8,6 +8,7 @@ var timeweek = require('./timeweekSchema');
 var ivr = require('./ivrSchema');
 var queue = require('./queueSchema');
 var incoming = require('./incomingSchema');
+var voicemail = require('./voicemailSchema');
 
 var types = require('./types');
 
@@ -28,6 +29,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'ivr', then: ivr.params})
         .when('type', {is: 'queue', then: queue.params})
         .when('type', {is: 'incoming', then: incoming.params})
+        .when('type', {is: 'voicemail', then: voicemail.params})
     ,
     "routes": Joi.any()
         .when('type', {is: 'peer', then: peer.routes})
@@ -38,6 +40,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'ivr', then: ivr.routes})
         .when('type', {is: 'queue', then: queue.routes})
         .when('type', {is: 'incoming', then: incoming.routes})
+        .when('type', {is: 'voicemail', then: voicemail.routes})
 });
 
 module.exports = baseSchema;
