@@ -14,7 +14,14 @@ var types = require('./types');
 
 var baseSchema = Joi.object().keys({
     "_id": Joi.string().required(),
-    "extension": Joi.string().allow(null),
+    
+    "extension": Joi.string()
+        .when('type', {
+            is: ['peer', 'incoming', 'user'], 
+            then: Joi.required(), 
+            otherwise: Joi.allow(null)
+        }),
+    
     "type": Joi.string().required().valid(types),
     "context": Joi.string().allow(['internal', 'incoming']),
     "title" : Joi.string().required(),
