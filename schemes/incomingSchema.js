@@ -4,7 +4,7 @@ var routes = require('./routes');
 
 var incoming = {
 	params: Joi.object().keys({
-		record: Joi.string().required().valid(['true', 'false']),
+		record: Joi.boolean(),
 		lines: Joi.string().required()
 	}),
 	routes: Joi.object().keys({
