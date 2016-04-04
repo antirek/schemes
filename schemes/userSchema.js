@@ -12,7 +12,6 @@ var user = {
                 "id": Joi.string().required()
             })
         )
-
     }),
     routes: Joi.object().keys({
         default: routes.standard

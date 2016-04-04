@@ -5,14 +5,20 @@
     "title" : "Абонент 1",
     "vpbxId": "1",
     "params": {
-    	"peername": "qw",
-    	"secret": "qw",
-    	"record": "yes"
+        "mobile": "89135292926",
+        "email": "serge.dmitriev@gmail.com",
+        "operator": true,
+        "objects": [
+            {
+                "type": "peer",
+                "id": "1234"
+            }
+        ] 	
     },
     "routes": {
     	"default": {
     		"type" : "peer",
-    		"id" : "1235"
+    		"id" : "1234"
     	}
     }
 }
