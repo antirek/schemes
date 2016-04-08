@@ -10,20 +10,26 @@ var queue1 = require('./objects/valid/queue/queue1.json');
 var voicemail1 = require('./objects/valid/voicemail/voicemail1.json');
 var fax1 = require('./objects/valid/fax/fax1.json');
 
-var validate = require('./index');
+var vpbxSettings1 = require('./objects/valid/vpbxSettings/vpbxSettings1.json');
+var blacklist1 = require('./objects/valid/blacklist/blacklist1.json');
+
+var schemes = require('./index');
 
 var arr = [
-    validate(peer1),
-    validate(user1),
-    validate(peergroup1),
-    validate(timeday1),
-    validate(timeweek1),
-    validate(incoming1),
-    validate(ivr1),
-    validate(queue1),
-    validate(voicemail1),
-    validate(fax1)    
+    schemes.validate(peer1, schemes.base),
+    schemes.validate(user1, schemes.base),
+    schemes.validate(peergroup1, schemes.base),
+    schemes.validate(timeday1, schemes.base),
+    schemes.validate(timeweek1, schemes.base),
+    schemes.validate(incoming1, schemes.base),
+    schemes.validate(ivr1, schemes.base),
+    schemes.validate(queue1, schemes.base),
+    schemes.validate(voicemail1, schemes.base),
+    schemes.validate(fax1, schemes.base),    
+    schemes.validate(blacklist1, schemes.blacklist),    
+    schemes.validate(vpbxSettings1, schemes.vpbxSettings)    
 ];
+
 
 Promise.all(arr)
     .then(function (res) {

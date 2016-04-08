@@ -1,13 +1,14 @@
 var Joi = require('joi');
 var baseSchema = require('./schemes/baseSchema');
+var vpbxSettingsSchema = require('./schemes/vpbxSettingsSchema');
+var blacklistSchema = require('./schemes/blacklistSchema');
 
-
-var validate = function (object, cb) {
+var validate = function (object, schema, cb) {
     if (cb) {
-        Joi.validate(object, baseSchema, cb);
+        Joi.validate(object, schema, cb);
     } else {
         return new Promise(function (resolve, reject) {
-            Joi.validate(object, baseSchema, function (err, res) {
+            Joi.validate(object, schema, function (err, res) {
                 if (err) {
                     reject(err);
                 } else {
@@ -19,4 +20,9 @@ var validate = function (object, cb) {
 };
 
 
-module.exports = validate
+module.exports = {
+    validate: validate,   
+    base: baseSchema,
+    vpbxSettings: vpbxSettingsSchema,
+    blacklist: blacklistSchema  
+};
