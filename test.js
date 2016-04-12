@@ -1,6 +1,7 @@
 
 var peer1 = require('./objects/valid/peer/peer1.json');
 var user1 = require('./objects/valid/user/user1.json');
+var user2 = require('./objects/valid/user/user2.json');
 var peergroup1 = require('./objects/valid/peergroup/peergroup1.json');
 var timeday1 = require('./objects/valid/timeday/timeday1.json');
 var timeweek1 = require('./objects/valid/timeweek/timeweek1.json');
@@ -18,6 +19,7 @@ var schemes = require('./index');
 var arr = [
     schemes.validate(peer1, schemes.base),
     schemes.validate(user1, schemes.base),
+    schemes.validate(user2, schemes.base),
     schemes.validate(peergroup1, schemes.base),
     schemes.validate(timeday1, schemes.base),
     schemes.validate(timeweek1, schemes.base),
@@ -25,7 +27,8 @@ var arr = [
     schemes.validate(ivr1, schemes.base),
     schemes.validate(queue1, schemes.base),
     schemes.validate(voicemail1, schemes.base),
-    schemes.validate(fax1, schemes.base),    
+    schemes.validate(fax1, schemes.base),
+    
     schemes.validate(blacklist1, schemes.blacklist),    
     schemes.validate(vpbxSettings1, schemes.vpbxSettings)    
 ];
