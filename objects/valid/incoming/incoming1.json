@@ -5,6 +5,11 @@
     "title": "Номер 3912745000",
     "vpbxId": "1",
     "context": "incoming",
+    "params": {
+        "checkBlacklist": true,
+        "lines": "3",
+        "record": false
+    },
     "routes": {
         "default": {
             "id": "56ea4d64aa53b5dcb4c6cb74",
