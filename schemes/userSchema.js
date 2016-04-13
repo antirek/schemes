@@ -13,7 +13,9 @@ var user = {
                 "type": Joi.string().required().valid(["peer", "voicemail"]),
                 "id": Joi.string().required()
             })
-        )
+        ),
+        "currentInterface": Joi.string(),
+        "pause": Joi.boolean()
     }),
     routes: Joi.object().keys({
         default: routes.standard
