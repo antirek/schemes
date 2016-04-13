@@ -7,7 +7,7 @@
     "params": {
     	"peername": "qw",
     	"secret": "qw",
-    	"record": "true",
+    	"record": true,
         "type": "friend",
         "host": "dynamic",
         "qualify": "yes",
@@ -15,7 +15,14 @@
         "outgoingNumber": "83912746606",
         "disallow": "all",
         "allow": "g729",
-        "lines": "1"
+        "lines": "1",
+        "allowOutbound": true,
+        "restrictedPrefixes": [
+            "89"
+        ],
+        "excludedPrefixes": [
+            "8913"
+        ]
     },
     "routes": {
     	"BUSY": {
