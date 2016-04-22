@@ -14,7 +14,9 @@ var user = {
                 "id": Joi.string().required()
             })
         ),
-        'userkey': Joi.string().length(16).alphanum().required()
+        'userkey': Joi.string().length(16).alphanum().required(),
+        "currentInterface": Joi.string(),
+        "pause": Joi.boolean()
     }),
     routes: Joi.object().keys({
         default: routes.standard
