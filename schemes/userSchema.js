@@ -13,7 +13,8 @@ var user = {
                 "type": Joi.string().required().valid(["peer", "voicemail"]),
                 "id": Joi.string().required()
             })
-        )
+        ),
+        'userkey': Joi.string().length(16).alphanum().required()
     }),
     routes: Joi.object().keys({
         default: routes.standard

@@ -1,6 +1,6 @@
 {
-	"_id": "1234",
- 	"extension": "101",
+    "_id": "1234",
+    "extension": "101",
     "type": "user",
     "title" : "Абонент 1",
     "vpbxId": "1",
@@ -14,12 +14,13 @@
                 "type": "peer",
                 "id": "1234"
             }
-        ] 	
+        ],
+        "userkey": "1234567890123456"
     },
     "routes": {
-    	"default": {
-    		"type" : "peer",
-    		"id" : "1234"
-    	}
+        "default": {
+            "type" : "peer",
+            "id" : "1234"
+        }
     }
 }
