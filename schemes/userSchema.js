@@ -6,7 +6,7 @@ var user = {
         "mobile": Joi.string(),
         "email": Joi.string().email(),
         "operator": Joi.boolean(),
-        "pincode": Joi.string().min(4).max(6).alphanum()
+        "pincode": Joi.string().length(5).alphanum()
             .when('operator', {is: true, then: Joi.required()}),
         "objects": Joi.array().items(
             Joi.object().keys({
@@ -14,7 +14,8 @@ var user = {
                 "id": Joi.string().required()
             })
         ),
-        'userkey': Joi.string().length(16).alphanum().required(),
+        "outgoingNumber": Joi.string().length(11).alphanum(),
+        "userkey": Joi.string().length(16).alphanum(),
         "currentInterface": Joi.string(),
         "pause": Joi.boolean()
     }),

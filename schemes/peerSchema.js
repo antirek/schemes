@@ -11,7 +11,7 @@ var peer = {
 		"host": Joi.string().required().valid('dynamic'),
 		"qualify": Joi.string().required(),
 		"timeout": Joi.string().required(),
-		"outgoingNumber": Joi.string().required(),
+		"outgoingNumber": Joi.string().length(11).required(),
 		"disallow": Joi.string().required(),
 		"allow": Joi.string().required(),
 		"lines": Joi.string().required(),
