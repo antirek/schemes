@@ -1,6 +1,8 @@
 var Joi = require('joi');
 var routes = require('./routes');
 
+var userOptions = require('./common/userOptions');
+
 var user = {
     params: Joi.object().keys({
         "mobile": Joi.string(),
@@ -14,11 +16,11 @@ var user = {
                 "id": Joi.string().required()
             })
         ),
-        "outgoingNumber": Joi.string().length(11).alphanum(),
         "userkey": Joi.string().length(16).alphanum(),
         "currentInterface": Joi.string(),
         "pause": Joi.boolean()
-    }),
+    })
+    .keys(userOptions),
     routes: Joi.object().keys({
         default: routes.standard
     })

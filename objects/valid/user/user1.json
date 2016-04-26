@@ -8,6 +8,8 @@
         "mobile": "89135292926",
         "email": "serge.dmitriev@gmail.com",
         "operator": false,
+        "record": true,
+        "allowOutbound": true,
         "objects": [
             {
                 "type": "peer",

@@ -7,6 +7,8 @@
     "params": {
         "mobile": "89135292926",
         "email": "serge.dmitriev@gmail.com",
+        "record": true,
+        "allowOutbound": true,
         "operator": true,
         "pincode": "12345",
         "objects": [
@@ -15,7 +17,8 @@
                 "id": "1234"
             }
         ],
-        "userkey": "1234567890123456"
+        "userkey": "1234567890123456",
+        "outgoingNumber": "83912745000"
     },
     "routes": {
         "default": {
