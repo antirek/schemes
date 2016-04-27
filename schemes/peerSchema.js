@@ -14,7 +14,9 @@ var peer = {
         "timeout": Joi.string().required(),     
         "disallow": Joi.string().required(),
         "allow": Joi.string().required(),
-        "lines": Joi.string().required()
+        "lines": Joi.string().required(),
+        "sendrpid": Joi.string().required().valid('yes'),
+        "trustrpid": Joi.string().required().valid('yes')
     }).keys(userOptions),
     routes: Joi.object().keys({
         "BUSY": routes.standard,
