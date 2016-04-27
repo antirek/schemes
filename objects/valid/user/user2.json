@@ -18,7 +18,9 @@
             }
         ],
         "userkey": "1234567890123456",
-        "outgoingNumber": "83912745000"
+        "outgoingNumber": "83912745000",
+        "presenceState": "available",
+        "basePeerId": "123456"
     },
     "routes": {
         "default": {

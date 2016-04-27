@@ -18,7 +18,9 @@ var user = {
         ),
         "userkey": Joi.string().length(16).alphanum(),
         "currentInterface": Joi.string(),
-        "pause": Joi.boolean()
+        "pause": Joi.boolean(),
+        "presenceState": Joi.string().required(),
+        "basePeerId": Joi.string().required().allow(null) 
     })
     .keys(userOptions),
     routes: Joi.object().keys({
