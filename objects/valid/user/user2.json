@@ -9,17 +9,10 @@
         "email": "serge.dmitriev@gmail.com",
         "record": true,
         "allowOutbound": true,
-        "operator": true,
+        "autoQueueLogin": false,
         "pincode": "12345",
-        "objects": [
-            {
-                "type": "peer",
-                "id": "1234"
-            }
-        ],
         "userkey": "1234567890123456",
         "outgoingNumber": "83912745000",
-        "presenceState": "available",
         "basePeerId": "123456"
     },
     "routes": {

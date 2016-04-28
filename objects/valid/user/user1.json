@@ -7,18 +7,12 @@
     "params": {
         "mobile": "89135292926",
         "email": "serge.dmitriev@gmail.com",
-        "operator": false,
+        "pincode": "12345",
+        "autoQueueLogin": true,
         "record": true,
-        "allowOutbound": true,
-        "objects": [
-            {
-                "type": "peer",
-                "id": "1234"
-            }
-        ],
+        "allowOutbound": true,        
         "userkey": "1234567890123456",
         "outgoingNumber": "83912745000",
-        "presenceState": "available",
         "basePeerId": "123456"
     },
     "routes": {
