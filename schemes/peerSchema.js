@@ -16,7 +16,8 @@ var peer = {
         "allow": Joi.string().required(),
         "lines": Joi.string().required(),
         "sendrpid": Joi.string().required().valid('yes'),
-        "trustrpid": Joi.string().required().valid('yes')
+        "trustrpid": Joi.string().required().valid('yes'),
+        "location": Joi.string().required().allow('')
     }).keys(userOptions),
     routes: Joi.object().keys({
         "BUSY": routes.standard,

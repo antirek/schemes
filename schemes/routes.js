@@ -1,6 +1,10 @@
 var Joi = require('joi');
 var types = require('./types');
-var id = Joi.alternatives().when('type', {is: 'sayunixtime', then: '', otherwise: Joi.string().required()})
+
+var id = Joi.alternatives().when('type', {
+    is: 'sayunixtime', then: '', otherwise: Joi.string().required()
+})
+
 var route = {
     standard: Joi.object().keys({
         type: Joi.string().required().valid(types),

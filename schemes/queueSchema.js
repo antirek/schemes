@@ -4,6 +4,7 @@ var routes = require('./routes');
 var queue = {
     params: Joi.object().keys({
         name: Joi.string().required(),
+        record: Joi.boolean().required().default(false),
         operators: Joi.object().keys({
             static: Joi.array().items(
                 Joi.object().keys({

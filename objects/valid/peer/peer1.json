@@ -22,7 +22,10 @@
         ],
         "excludedPrefixes": [
             "8913"
-        ]
+        ],
+        "trustrpid": "yes",
+        "sendrpid": "yes",
+        "location": ""
     },
     "routes": {
     	"BUSY": {

@@ -5,6 +5,7 @@
     "title" : "Очередь 1",
     "vpbxId": "1",
     "params": {
-        "name": "Q1234"
+        "name": "Q1234",
+        "record": true
     }
 }
