@@ -10,8 +10,8 @@ var user = {
         "pincode": Joi.string().length(5).alphanum().required(),
         "autoQueueLogin": Joi.boolean().required().default(false),
         "userkey": Joi.string().length(16).alphanum(),
-        "currentInterface": Joi.string(),
-        "basePeerId": Joi.string().required().allow(null)
+        "currentInterface": Joi.string().allow(''),
+        "basePeerId": Joi.string().allow('')
     })
     .keys(userOptions),
     routes: Joi.object().keys({
