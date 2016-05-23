@@ -33,6 +33,11 @@ var route = {
     custom: Joi.object().keys({
         type: Joi.string().required().valid(types),
         id: id
+    }),
+    day: Joi.object().keys({
+        day: Joi.string().required(),
+        type: Joi.string().required().valid(types),
+        id: id
     })
 };
 
