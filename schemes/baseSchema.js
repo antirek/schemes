@@ -9,22 +9,23 @@ var ivr = require('./ivrSchema');
 var queue = require('./queueSchema');
 var incoming = require('./incomingSchema');
 var voicemail = require('./voicemailSchema');
+var service = require('./serviceSchema');
 
 var types = require('./types');
 
 var baseSchema = Joi.object().keys({
     "_id": Joi.string().required(),
-    
+
     "extension": Joi.string()
         .when('type', {
-            is: ['peer', 'incoming', 'user'], 
-            then: Joi.required(), 
+            is: ['peer', 'incoming', 'user', 'service'],
+            then: Joi.required(),
             otherwise: Joi.allow(null)
         }),
-    
+
     "type": Joi.string().required().valid(types),
     "context": Joi.string().allow(['internal', 'incoming']),
-    "title" : Joi.string().required(),
+    "title": Joi.string().required(),
     "vpbxId": Joi.string().required(),
 
     "params": Joi.any()
@@ -37,6 +38,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'queue', then: queue.params})
         .when('type', {is: 'incoming', then: incoming.params})
         .when('type', {is: 'voicemail', then: voicemail.params})
+        .when('type', {is: 'service', then: service.params})
     ,
     "routes": Joi.any()
         .when('type', {is: 'peer', then: peer.routes})
@@ -48,6 +50,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'queue', then: queue.routes})
         .when('type', {is: 'incoming', then: incoming.routes})
         .when('type', {is: 'voicemail', then: voicemail.routes})
+        .when('type', {is: 'service', then: service.routes})
 });
 
 module.exports = baseSchema;
