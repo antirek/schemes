@@ -18,7 +18,8 @@ var queue = {
                     id: Joi.string().required()
                 })
             )
-        })
+        }),
+        musiconhold: Joi.string()
     }),
     routes: Joi.any()
 };
