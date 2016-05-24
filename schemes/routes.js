@@ -2,7 +2,9 @@ var Joi = require('joi');
 var types = require('./types');
 
 var id = Joi.alternatives().when('type', {
-    is: 'sayunixtime', then: '', otherwise: Joi.string().required()
+    is: 'sayunixtime', then: '', otherwise: Joi.string().required(),
+    is: 'registrationuser', then: '', otherwise: Joi.string().required(),
+    is: 'registrationoperator', then: '', otherwise: Joi.string().required()
 })
 
 var route = {
