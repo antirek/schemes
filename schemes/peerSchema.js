@@ -11,7 +11,7 @@ var peer = {
         "type": Joi.string().required().valid('friend'),
         "host": Joi.string().required().valid('dynamic'),
         "qualify": Joi.string().required(),
-        "timeout": Joi.string().required(),     
+        "timeout": Joi.string(),
         "disallow": Joi.string().required(),
         "allow": Joi.string().required(),
         "lines": Joi.string().required(),
