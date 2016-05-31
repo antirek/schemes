@@ -13,6 +13,7 @@ var fax1 = require('./objects/valid/fax/fax1.json');
 
 var vpbxSettings1 = require('./objects/valid/vpbxSettings/vpbxSettings1.json');
 var blacklist1 = require('./objects/valid/blacklist/blacklist1.json');
+var trunk1 = require('./objects/valid/trunk/trunk1.json');
 
 var schemes = require('./index');
 
@@ -30,7 +31,8 @@ var arr = [
     schemes.validate(fax1, schemes.base),
     
     schemes.validate(blacklist1, schemes.blacklist),    
-    schemes.validate(vpbxSettings1, schemes.vpbxSettings)    
+    schemes.validate(vpbxSettings1, schemes.vpbxSettings),
+    schemes.validate(trunk1, schemes.trunk)
 ];
 
 

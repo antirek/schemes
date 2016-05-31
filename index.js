@@ -2,6 +2,8 @@ var Joi = require('joi');
 var baseSchema = require('./schemes/baseSchema');
 var vpbxSettingsSchema = require('./schemes/vpbxSettingsSchema');
 var blacklistSchema = require('./schemes/blacklistSchema');
+var trunkSchema = require('./schemes/trunkSchema');
+
 
 var validate = function (object, schema, cb) {
     if (cb) {
@@ -24,5 +26,6 @@ module.exports = {
     validate: validate,   
     base: baseSchema,
     vpbxSettings: vpbxSettingsSchema,
-    blacklist: blacklistSchema  
+    blacklist: blacklistSchema,
+    trunk: trunkSchema
 };
