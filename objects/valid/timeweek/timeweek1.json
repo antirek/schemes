@@ -6,6 +6,7 @@
     "vpbxId": "1",
     "context": "internal",
     "routes": {
+       "days":{
         "mon": {
             "id": "56ea4d64aa53b5dcb4c6cb74",
             "type": "peer"
@@ -35,4 +36,5 @@
             "type": "timeday"
         }
     }
+  }
 }
