@@ -4,36 +4,45 @@
     "type": "ivr",
     "params": {
         "soundId": "56d6b10c5751be0c324b8617",
-        "maxdigits": "1",
-        "options": "1"
+        "timeout": "10",
+        "passToInternal": false,
+        "attempts": "1",
+        "answer": true,
+        "repeat": "3"
     },
-    "routes": [
-        {
-            "key": "1",
-            "id": "56ea76deaa53b5dcb4c6cb79",
-            "type": "timeday"
-        },
-        {
-            "key": "2",
-            "type": "sayunixtime",
-            "id": ""
-        },
-        {
-            "key": "3",
-            "type": "timeweek",
-            "id": "56ea743baa53b5dcb4c6cb78"
-        },
-        {
-            "key": "4",
+    "routes": {
+        "keys": [
+            {
+                "key": "1",
+                "id": "56ea76deaa53b5dcb4c6cb79",
+                "type": "timeday"
+            },
+            {
+                "key": "2",
+                "type": "sayunixtime",
+                "id": ""
+            },
+            {
+                "key": "3",
+                "type": "timeweek",
+                "id": "56ea743baa53b5dcb4c6cb78"
+            },
+            {
+                "key": "4",
+                "type": "user",
+                "id": "56ea3f065751be0c324b8619"
+            },
+            {
+                "key": "5",
+                "type": "peer",
+                "id": "56c18960bb5e354b56afecb1"
+            }
+        ],
+        "default": {
             "type": "user",
-            "id": "56ea3f065751be0c324b8619"
-        },
-        {
-            "key": "5",
-            "type": "peer",
             "id": "56c18960bb5e354b56afecb1"
         }
-    ],
+    },
     "extension": "200",
     "title": "12"
 }
