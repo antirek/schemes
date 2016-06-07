@@ -1,5 +1,15 @@
 {
 	"_id": "1234",
     "vpbxId": "1",
-    "category": "premium"
+    "category": "premium",
+    "availableExternalCallerids": [
+    	"83912746606"
+    ],
+    "domain": "lopata",
+    "outgoingCodes": [
+    	{
+    		"number": "83912746606",
+    		"code": "104"
+    	}
+    ]
 }
