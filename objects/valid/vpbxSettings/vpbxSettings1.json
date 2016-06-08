@@ -3,13 +3,10 @@
     "vpbxId": "1",
     "params" : {
         "category": "premium",
-        "availableExternalCallerids": [
-            "83912746606"
-        ],
         "domain": "lopata",
-        "outgoingCodes": [
+        "availableExternalCallerids": [
             {
-                "number": "83912746606",
+                "callerid": "83912746606",
                 "code": "104"
             }
         ]
