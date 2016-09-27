@@ -28,7 +28,7 @@ var validate = function (object, schema, options, cb) {
 
 
 module.exports = {
-    validate: validate,...
+    validate: validate,
     base: baseSchema,
     vpbxSettings: vpbxSettingsSchema,
     blacklist: blacklistSchema,
