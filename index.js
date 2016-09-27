@@ -5,12 +5,17 @@ var blacklistSchema = require('./schemes/blacklistSchema');
 var trunkSchema = require('./schemes/trunkSchema');
 
 
-var validate = function (object, schema, cb) {
+var validate = function (object, schema, options, cb) {
+    if(!cb && typeof options === 'function'){
+        cb = options;
+        options = {};
+    }
+
     if (cb) {
-        Joi.validate(object, schema, cb);
+        Joi.validate(object, schema, options, cb);
     } else {
         return new Promise(function (resolve, reject) {
-            Joi.validate(object, schema, function (err, res) {
+            Joi.validate(object, schema, options, function (err, res) {
                 if (err) {
                     reject(err);
                 } else {
@@ -23,9 +28,12 @@ var validate = function (object, schema, cb) {
 
 
 module.exports = {
-    validate: validate,   
+    validate: validate,...
     base: baseSchema,
     vpbxSettings: vpbxSettingsSchema,
     blacklist: blacklistSchema,
     trunk: trunkSchema
 };
+
+
+
