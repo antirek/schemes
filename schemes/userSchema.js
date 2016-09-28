@@ -13,8 +13,10 @@ var user = {
         "currentInterface": Joi.string().allow(''),
         "basePeerId": Joi.string().allow('')
     })
-    .keys(userOptions),
+        .keys(userOptions),
     routes: Joi.object().keys({
+        direct: Joi.string().allow(['base', 'base_mobile', 'base_route', 'mobile']).default('base'),
+        queue: Joi.string().allow(['base', 'mobile']),
         default: routes.standard
     })
 };
