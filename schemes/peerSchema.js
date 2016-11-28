@@ -14,7 +14,7 @@ var peer = {
         "timeout": Joi.string(),
         "disallow": Joi.string().required(),
         "allow": Joi.string().required(),
-        "lines": Joi.string().required(),
+        "lines": Joi.string().default(2),
         "sendrpid": Joi.string().required().valid('yes'),
         "trustrpid": Joi.string().required().valid('yes'),
         "location": Joi.string().allow(''),
