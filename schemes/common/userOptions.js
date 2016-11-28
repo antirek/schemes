@@ -1,8 +1,7 @@
 
 var Joi = require('joi');
 
-var common = {
-    "allowOutbound": Joi.boolean().required().default(true),
+var common = {    
     "restrictedPrefixes": Joi.array().items(
         Joi.string().required()
     ).sparse(),

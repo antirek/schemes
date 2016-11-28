@@ -13,6 +13,7 @@ var user = {
         "currentInterface": Joi.string().allow(''),
         "basePeerId": Joi.string().allow(''),
         "outgoingNumber": Joi.string().length(11).required(),
+        "allowOutbound": Joi.boolean().default(true),
     })
     .keys(userOptions),
     routes: Joi.object().keys({

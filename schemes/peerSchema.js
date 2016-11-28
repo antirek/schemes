@@ -19,6 +19,7 @@ var peer = {
         "trustrpid": Joi.string().required().valid('yes'),
         "location": Joi.string().allow(''),
         "outgoingNumber": Joi.string().length(11),
+        "allowOutbound": Joi.boolean().default(false),
     }).keys(userOptions),
     routes: Joi.object().keys({
         "BUSY": routes.standard,
