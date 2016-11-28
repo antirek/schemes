@@ -8,8 +8,7 @@ var common = {
     ).sparse(),
     "excludedPrefixes": Joi.array().items(
         Joi.string().required()
-    ).sparse(),
-    "outgoingNumber": Joi.string().length(11).required(),
+    ).sparse(),    
     "record": Joi.boolean().required().default(false),
 };
 
