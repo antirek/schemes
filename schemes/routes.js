@@ -6,7 +6,16 @@ var id = Joi.any()
     .when('type', {is: 'registrationuser', then: ''})
     .when('type', {is: 'registrationoperator', then: '', otherwise: Joi.string().required()});
 
+var userId = Joi.any()
+    .when('type', {is: 'sayunixtime', then: ''})
+    .when('type', {is: 'registrationuser', then: ''})
+    .when('type', {is: 'registrationoperator', then: '', otherwise: Joi.string()});
+
 var route = {
+    user: Joi.object().keys({
+        type: Joi.string().valid(types),
+        id: userId
+    }),
     standard: Joi.object().keys({
         type: Joi.string().required().valid(types),
         id: id

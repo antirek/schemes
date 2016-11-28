@@ -17,7 +17,7 @@ var user = {
     routes: Joi.object().keys({
         direct: Joi.string().allow(['base', 'base_mobile', 'base_route', 'mobile']).default('base'),
         queue: Joi.string().allow(['base', 'mobile']),
-        default: routes.standard
+        default: routes.user
     })
 };
 
