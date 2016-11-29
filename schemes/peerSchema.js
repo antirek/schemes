@@ -14,10 +14,12 @@ var peer = {
         "timeout": Joi.string(),
         "disallow": Joi.string().required(),
         "allow": Joi.string().required(),
-        "lines": Joi.string().required(),
+        "lines": Joi.string().default(2),
         "sendrpid": Joi.string().required().valid('yes'),
         "trustrpid": Joi.string().required().valid('yes'),
-        "location": Joi.string().allow('')
+        "location": Joi.string().allow(''),
+        "outgoingNumber": Joi.string().length(11),
+        "allowOutbound": Joi.boolean().default(false),
     }).keys(userOptions),
     routes: Joi.object().keys({
         "BUSY": routes.standard,

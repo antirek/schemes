@@ -11,9 +11,11 @@ var user = {
         "autoQueueLogin": Joi.boolean().required().default(false),
         "userkey": Joi.string().length(16).alphanum(),
         "currentInterface": Joi.string().allow(''),
-        "basePeerId": Joi.string().allow('')
+        "basePeerId": Joi.string().allow(''),
+        "outgoingNumber": Joi.string().length(11).required(),
+        "allowOutbound": Joi.boolean().default(true),
     })
-        .keys(userOptions),
+    .keys(userOptions),
     routes: Joi.object().keys({
         direct: Joi.string().allow(['base', 'base_mobile', 'base_route', 'mobile']).default('base'),
         queue: Joi.string().allow(['base', 'mobile']),
