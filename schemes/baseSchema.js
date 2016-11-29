@@ -18,7 +18,7 @@ var baseSchema = Joi.object().keys({
 
     "extension": Joi.string()
         .when('type', {
-            is: ['peer', 'incoming', 'user', 'service'],
+            is: ['incoming', 'user', 'service'],
             then: Joi.required(),
             otherwise: Joi.allow(null)
         }),
