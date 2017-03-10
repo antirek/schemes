@@ -5,7 +5,7 @@ var routes = require('./routes');
 var voicemail = {
 	params: Joi.object().keys({
 		number: Joi.string().required(),
-		keys: Joi.string().required(),
+		email:Joi.string(),
 		password: Joi.string().required()
 	}),
 	routes: Joi.any()

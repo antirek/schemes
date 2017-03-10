@@ -19,6 +19,7 @@ var queue = {
                 })
             )
         }),
+        strategy: Joi.string().allow(['ringall', 'rrmemory', 'fewestcalls', 'leastrecent', 'random', 'wrandom']).default('ringall'),
         musiconhold: Joi.string()
     }),
     routes: Joi.any()

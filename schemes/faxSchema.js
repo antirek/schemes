@@ -3,7 +3,9 @@ var Joi = require('joi');
 var routes = require('./routes');
 
 var fax = {
-	params: Joi.any(),
+	params: Joi.object().keys({
+        email:Joi.string()
+    }),
 	routes: Joi.any()
 };
 
