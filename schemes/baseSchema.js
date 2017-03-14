@@ -10,6 +10,7 @@ var queue = require('./queueSchema');
 var incoming = require('./incomingSchema');
 var voicemail = require('./voicemailSchema');
 var service = require('./serviceSchema');
+var message = require('./messageSchema');
 
 var types = require('./types');
 
