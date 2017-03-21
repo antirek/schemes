@@ -40,6 +40,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'incoming', then: incoming.params})
         .when('type', {is: 'voicemail', then: voicemail.params})
         .when('type', {is: 'service', then: service.params})
+        .when('type', {is: 'message', then: message.params})
     ,
     "routes": Joi.any()
         .when('type', {is: 'peer', then: peer.routes})
@@ -52,6 +53,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'incoming', then: incoming.routes})
         .when('type', {is: 'voicemail', then: voicemail.routes})
         .when('type', {is: 'service', then: service.routes})
+        .when('type', {is: 'message', then: message.routes})
 });
 
 module.exports = baseSchema;

@@ -5,7 +5,7 @@ var ivr = {
     params: Joi.object().keys({
         "sms": Joi.string(),
         "email": Joi.string(),
-        "text": Joi.string().required
+        "text": Joi.string().required()
     }),
     routes: Joi.object().keys({
         default: routes.standard
