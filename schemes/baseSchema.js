@@ -11,6 +11,7 @@ var incoming = require('./incomingSchema');
 var voicemail = require('./voicemailSchema');
 var service = require('./serviceSchema');
 var message = require('./messageSchema');
+var recordMessage = require('./recordMessageSchema');
 
 var types = require('./types');
 
@@ -41,6 +42,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'voicemail', then: voicemail.params})
         .when('type', {is: 'service', then: service.params})
         .when('type', {is: 'message', then: message.params})
+        .when('type', {is: 'recordmessage', then: recordMessage.params})
     ,
     "routes": Joi.any()
         .when('type', {is: 'peer', then: peer.routes})
@@ -54,6 +56,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {is: 'voicemail', then: voicemail.routes})
         .when('type', {is: 'service', then: service.routes})
         .when('type', {is: 'message', then: message.routes})
+        .when('type', {is: 'recordmessage', then: recordMessage.routes})
 });
 
 module.exports = baseSchema;
