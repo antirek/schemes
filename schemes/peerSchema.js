@@ -7,7 +7,7 @@ var userOptions = require('./common/userOptions');
 var peer = {
     params: Joi.object().keys({
         "peername": Joi.string().required(),
-        "secret": Joi.string().valid(""),
+        "secret": Joi.string().empty(''),
         "type": Joi.string().required().valid('friend'),
         "host": Joi.string().required().valid('dynamic'),
         "qualify": Joi.string().required(),
