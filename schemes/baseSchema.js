@@ -22,7 +22,7 @@ var baseSchema = Joi.object().keys({
         .when('type', {
             is: ['incoming', 'user', 'service'],
             then: Joi.required(),
-            otherwise: Joi.allow(null)
+            otherwise: Joi.empty('')
         }),
 
     "type": Joi.string().required().valid(types),

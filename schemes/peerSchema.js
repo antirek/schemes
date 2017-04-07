@@ -17,7 +17,7 @@ var peer = {
         "lines": Joi.string().default(2),
         "sendrpid": Joi.string().required().valid('yes'),
         "trustrpid": Joi.string().required().valid('yes'),
-        "location": Joi.string().allow(''),
+        "location": Joi.string().empty(''),
         "outgoingNumber": Joi.string().length(11),
         "allowOutbound": Joi.boolean().default(false)
     }).keys(userOptions),
