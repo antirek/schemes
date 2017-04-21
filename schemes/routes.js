@@ -26,7 +26,7 @@ var route = {
         begin: Joi.string().required(),
         end: Joi.string().required()
     }),
-    peergroup: Joi.object().keys({
+    group: Joi.object().keys({
         type: Joi.string().required().valid(types),
         id: id,
         wait: Joi.string().required(),
