@@ -9,7 +9,7 @@ var user = {
         "email": Joi.string().email(),
         "pincode": Joi.string().length(5).alphanum().required(),
         "autoQueueLogin": Joi.boolean().required().default(false),
-        "userkey": Joi.string().length(16).alphanum(),
+        "userkey": Joi.string().min(15).max(16).alphanum(),
         "currentInterface": Joi.string().empty(''),
         "basePeerId": Joi.string().empty(''),
         "outgoingNumber": Joi.string().length(11).required(),
