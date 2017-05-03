@@ -20,9 +20,16 @@ var queue = {
             )
         }),
         strategy: Joi.string().allow(['ringall', 'rrmemory', 'fewestcalls', 'leastrecent', 'random', 'wrandom']).default('ringall'),
-        musiconhold: Joi.string()
+        musiconhold: Joi.string(),
+        maxlen: Joi.string().default('30'),
+        processing_wait_time: Joi.string().default('3600')
     }),
-    routes: Joi.any()
+    routes: Joi.object().keys({
+        timeout: routes.standard,
+        full: routes.standard,
+        empty: routes.standard,
+        busy: routes.standard
+    })
 };
 
 
