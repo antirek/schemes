@@ -44,6 +44,10 @@ var route = {
         type: Joi.string().required().valid(types),
         id: id
     }),
+    queue: Joi.object().keys({
+        type: Joi.string().valid(types).empty(''),
+        id: id.empty('')
+    }),
     day: Joi.object().keys({
         day: Joi.string().required(),
         type: Joi.string().required().valid(types),

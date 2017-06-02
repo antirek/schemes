@@ -14,6 +14,7 @@ var user = {
         "basePeerId": Joi.string().empty(''),
         "outgoingNumber": Joi.string().length(11).required(),
         "allowOutbound": Joi.boolean().default(true),
+        "sendNotificationAboutCall": Joi.boolean().default(false)
     })
     .keys(userOptions),
     routes: Joi.object().keys({

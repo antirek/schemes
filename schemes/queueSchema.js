@@ -25,10 +25,10 @@ var queue = {
         processing_wait_time: Joi.string().default('3600')
     }),
     routes: Joi.object().keys({
-        timeout: routes.standard,
-        full: routes.standard,
-        empty: routes.standard,
-        busy: routes.standard
+        timeout: routes.queue,
+        full: routes.queue,
+        empty: routes.queue,
+        busy: routes.queue
     })
 };
 
