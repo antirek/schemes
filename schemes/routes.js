@@ -52,6 +52,16 @@ var route = {
         day: Joi.string().required(),
         type: Joi.string().required().valid(types),
         id: id
+    }),
+    template: Joi.object().keys({
+        template: Joi.string().required(),
+        type: Joi.string().required().valid(types),
+        id: id
+    }),
+    region: Joi.object().keys({
+        regions: Joi.array().items(Joi.string()),
+        type: Joi.string().required().valid(types),
+        id: id
     })
 };
 
