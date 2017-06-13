@@ -8,7 +8,8 @@ var incoming = {
         routingCode: Joi.string(),
         queuelines: Joi.string(),
         category: Joi.string(),
-        checkBlacklist: Joi.boolean().default(false)
+        checkBlacklist: Joi.boolean().default(false),
+        sendMetrics: Joi.boolean().default(true)
 
     }),
     routes: Joi.object().keys({
