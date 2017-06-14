@@ -5,8 +5,8 @@ var userOptions = require('./common/userOptions');
 
 var user = {
     params: Joi.object().keys({
-        "mobile": Joi.string(),
-        "email": Joi.string().email(),
+        "mobile": Joi.string().empty(""),
+        "email": Joi.string().email().empty(""),
         "pincode": Joi.string().length(5).alphanum().required(),
         "autoQueueLogin": Joi.boolean().required().default(false),
         "userkey": Joi.string().min(15).max(16).alphanum(),
